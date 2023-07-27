@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap');
+
+h1 {
+    position: flex;
+    font-family: 'Handjet', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2em;
+    opacity: 1;
+}
+
+h2 {
+    position: flex;
+    font-family: 'Handjet', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2em;
+    opacity: 1;
+}
+
+.grid {
+    position: absolute;
+    display: flex;
+    padding: 2%, .1%, 2%, .1%;
+    margin: 1%;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.05);
+    top: 30%;
+    left: 10%;
+}
