@@ -37,7 +37,7 @@ export class BackgroundAnimationComponent implements OnInit {
     height: window.innerHeight,
   };
   private scale: number = 1;
-  private incrementSteps: number = 30;
+  private incrementSteps: number = 45;
 
   private camera!: THREE.PerspectiveCamera;
   private scene!: THREE.Scene;
@@ -147,7 +147,7 @@ export class BackgroundAnimationComponent implements OnInit {
 
     return star;
   }
-  
+
   moveToHome(x: number, y: number, z: number, zR: number) {
     //-20, 4, 60, -.15
     const animateCamera = () => {
@@ -186,19 +186,18 @@ export class BackgroundAnimationComponent implements OnInit {
     animateCamera();
   }
 
-  //TODO: Adjust the position so the earth is set better
   moveToAbout(x: number, y: number, z: number, zR: number) {
-    //0, 15, 25, -.3
+    //0, 19, 5, 0
     const animateCamera = () => {
       this.camera.position.x = this.shift(x, this.camera.position.x, 0, Math.abs(x) / this.incrementSteps);
-      this.camera.position.y = this.shift(y, this.camera.position.y, 15, Math.abs(y - 15) / this.incrementSteps);
-      this.camera.position.z = this.shift(z, this.camera.position.z, 25, Math.abs(z - 25) / this.incrementSteps);
-      this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, -.3, Math.abs(zR + .3) / this.incrementSteps);
+      this.camera.position.y = this.shift(y, this.camera.position.y, 19, Math.abs(y - 19) / this.incrementSteps);
+      this.camera.position.z = this.shift(z, this.camera.position.z, 5, Math.abs(z - 5) / this.incrementSteps);
+      this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, 0, Math.abs(zR) / this.incrementSteps);
       this.renderer.render(this.scene, this.camera);
       if (this.camera.position.x != 0 ||
-          this.camera.position.y != 15 ||
-          this.camera.position.z != 25 ||
-          Math.abs(this.camera.rotation.z - -.3) > .0001) {
+          this.camera.position.y != 19 ||
+          this.camera.position.z != 5 ||
+          Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
       }
     };
