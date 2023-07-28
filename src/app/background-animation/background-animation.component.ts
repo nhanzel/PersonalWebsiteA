@@ -22,6 +22,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.moveToProjects(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
         } else if (event.url === "/about") {
           this.moveToAbout(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
+        } else if (event.url === "/blog") {
+          this.moveToBlog(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
         }
       } else if (event instanceof NavigationEnd) {
         this.canvas.nativeElement.style.display = 'block';
@@ -65,7 +67,7 @@ export class BackgroundAnimationComponent implements OnInit {
       1000
     );
     //const controls = new OrbitControls(camera, renderer.domElement);
-    this.camera.position.x = -20;
+    this.camera.position.x = -30;
     this.camera.position.y = 4 * this.scale;
     this.camera.position.z = 60 * this.scale;
     this.camera.rotation.z = -.15;
@@ -151,12 +153,12 @@ export class BackgroundAnimationComponent implements OnInit {
   moveToHome(x: number, y: number, z: number, zR: number) {
     //-20, 4, 60, -.15
     const animateCamera = () => {
-      this.camera.position.x = this.shift(x, this.camera.position.x, -20, Math.abs(x + 20) / this.incrementSteps);
+      this.camera.position.x = this.shift(x, this.camera.position.x, -30, Math.abs(x + 30) / this.incrementSteps);
       this.camera.position.y = this.shift(y, this.camera.position.y, 4, Math.abs(y - 4) / this.incrementSteps);
       this.camera.position.z = this.shift(z, this.camera.position.z, 60, Math.abs(z - 60) / this.incrementSteps);
       this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, -.15, Math.abs(zR + .15) / this.incrementSteps);
       this.renderer.render(this.scene, this.camera);
-      if (this.camera.position.x != -20 ||
+      if (this.camera.position.x != -30 ||
           this.camera.position.y != 4 ||
           this.camera.position.z != 60 ||
           Math.abs(this.camera.rotation.z - -.15) > .0001) {
@@ -168,17 +170,17 @@ export class BackgroundAnimationComponent implements OnInit {
   }
 
   moveToProjects(x: number, y: number, z: number, zR: number) {
-    //20, -2, 20, -.3
+    //20, -2, 20, 0
     const animateCamera = () => {
       this.camera.position.x = this.shift(x, this.camera.position.x, 20, Math.abs(x - 20) / this.incrementSteps);
       this.camera.position.y = this.shift(y, this.camera.position.y, -2, Math.abs(y + 2) / this.incrementSteps);
       this.camera.position.z = this.shift(z, this.camera.position.z, 20, Math.abs(z - 20) / this.incrementSteps);
-      this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, -.3, Math.abs(zR + .3) / this.incrementSteps);
+      this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, 0, Math.abs(zR) / this.incrementSteps);
       this.renderer.render(this.scene, this.camera);
       if (this.camera.position.x != 20 ||
           this.camera.position.y != -2 ||
           this.camera.position.z != 20 ||
-          Math.abs(this.camera.rotation.z - -.3) > .0001) {
+          Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
       }
     };
@@ -197,6 +199,25 @@ export class BackgroundAnimationComponent implements OnInit {
       if (this.camera.position.x != 0 ||
           this.camera.position.y != 19 ||
           this.camera.position.z != 5 ||
+          Math.abs(this.camera.rotation.z) > .0001) {
+        window.requestAnimationFrame(animateCamera);
+      }
+    };
+
+    animateCamera();
+  }
+
+  moveToBlog(x: number, y: number, z: number, zR: number) {
+    //-20, -2 20, 0
+    const animateCamera = () => {
+      this.camera.position.x = this.shift(x, this.camera.position.x, -20, Math.abs(x + 20) / this.incrementSteps);
+      this.camera.position.y = this.shift(y, this.camera.position.y, -2, Math.abs(y + 2) / this.incrementSteps);
+      this.camera.position.z = this.shift(z, this.camera.position.z, 20, Math.abs(z - 20) / this.incrementSteps);
+      this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, 0, Math.abs(zR) / this.incrementSteps);
+      this.renderer.render(this.scene, this.camera);
+      if (this.camera.position.x != -20 ||
+          this.camera.position.y != -2 ||
+          this.camera.position.z != 20 ||
           Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
       }
