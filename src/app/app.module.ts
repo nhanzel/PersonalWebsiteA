@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { BackgroundAnimationComponent } from './background-animation/background-animation.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { MenuComponent } from './menu/menu.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundAnimationComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    MenuComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

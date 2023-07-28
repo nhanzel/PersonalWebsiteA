@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap');
+
+.grid {
+    position: absolute;
+    display: flex;
+    padding: 2%, .1%, 2%, .1%;
+    margin: 1%;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.05);
+}
