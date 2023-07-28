@@ -24,6 +24,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.moveToAbout(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
         } else if (event.url === "/blog") {
           this.moveToBlog(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
+        } else if (event.url === "/explore") {
+          this.moveToExplore(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
         }
       } else if (event instanceof NavigationEnd) {
         this.canvas.nativeElement.style.display = 'block';
@@ -219,6 +221,25 @@ export class BackgroundAnimationComponent implements OnInit {
           this.camera.position.y != -2 ||
           this.camera.position.z != 20 ||
           Math.abs(this.camera.rotation.z) > .0001) {
+        window.requestAnimationFrame(animateCamera);
+      }
+    };
+
+    animateCamera();
+  }
+
+  moveToExplore(x: number, y: number, z: number, zR: number) {
+    //-20, -2 20, 0
+    const animateCamera = () => {
+      this.camera.position.x = this.shift(x, this.camera.position.x, -20, Math.abs(x + 20) / this.incrementSteps);
+      this.camera.position.y = this.shift(y, this.camera.position.y, -50, Math.abs(y + 50) / this.incrementSteps);
+      this.camera.position.z = this.shift(z, this.camera.position.z, 400, Math.abs(z - 400) / this.incrementSteps);
+      this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, 1, Math.abs(zR - 1) / this.incrementSteps);
+      this.renderer.render(this.scene, this.camera);
+      if (this.camera.position.x != -20 ||
+          this.camera.position.y != -50 ||
+          this.camera.position.z != 400 ||
+          Math.abs(this.camera.rotation.z - 1) > .0001) {
         window.requestAnimationFrame(animateCamera);
       }
     };
