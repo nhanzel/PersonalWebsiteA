@@ -6,6 +6,7 @@ h1 {
     font-weight: 300;
     line-height: 1.2em;
     opacity: 1;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -20,6 +21,18 @@ h2 {
 
 .grid {
     flex-direction: column;
+    justify-content: center;
     top: 20%;
     left: 10%;
+}
+
+.logo {
+    position: flex;
+    width: 5%;
+    height: 100%;
+    margin-right: 2%;
+}
+
+#logogrid {
+    flex-direction: row;
 }
