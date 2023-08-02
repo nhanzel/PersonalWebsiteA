@@ -8,11 +8,11 @@ export class GlobalService {
   
   private isAnimating$: Subject<boolean> = new Subject<boolean>;
 
-  setIsAnimating(isAnimating: boolean): void {
-    this.isAnimating$.next(isAnimating);
-  }
-
   getIsAnimating(): Observable<boolean> {
     return this.isAnimating$.asObservable();
+  }
+  
+  setIsAnimating(isAnimating: boolean): void {
+    this.isAnimating$.next(isAnimating);
   }
 }

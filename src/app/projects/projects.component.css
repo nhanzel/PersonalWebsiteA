@@ -1,8 +1,24 @@
-p {
-    color: white;
+h2 {
+    font-size: 80px;
+    margin-top: 0px;
 }
 
 .grid {
-    right: 15%;
-    top: 25%;
+    right: 5%;
+    top: 5%;
+    width: 50%;
+    flex-direction: column;
+}
+
+td {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+td:hover {
+    border: 1px solid white;
+}
+
+table {
+    border-spacing: 0 15px;
 }

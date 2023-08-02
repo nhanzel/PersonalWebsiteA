@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ExploreComponent } from './explore/explore.component';
 import { GlobalService } from './global';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { ProjectItemComponent } from './project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { GlobalService } from './global';
     AboutComponent,
     BlogComponent,
     ExploreComponent,
+    ProjectDetailsComponent,
+    ProjectItemComponent,
   ],
   imports: [
     BrowserModule,

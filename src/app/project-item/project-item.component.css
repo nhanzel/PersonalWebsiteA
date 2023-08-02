@@ -1,0 +1,23 @@
+img {
+    height: 250px;
+    width: 250px;
+    float: left;
+    padding-right: 2em;
+}
+
+h3 {
+    font-size: 40px;
+    margin-top: 1%;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+.project-summary {
+    margin-top: 3%;
+    float: left;
+}
