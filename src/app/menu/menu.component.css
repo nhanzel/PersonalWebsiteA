@@ -3,4 +3,9 @@
     font-family: 'Barlow', sans-serif;
     color: #ffffff;
     text-decoration: none;
+    padding-right: 3%;
+}
+
+.grid {
+    position: fixed;
 }
