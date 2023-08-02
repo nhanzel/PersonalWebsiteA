@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { GlobalService } from '../global';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -10,12 +11,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 })
 
 export class BackgroundAnimationComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private globalService: GlobalService, private router: Router) {}
 
   ngOnInit(): void {
     this.createThreeJsBox();
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
+        //? I don't know if this will retrigger the animation for one frame if they click on a page they are already on
+        this.globalService.setIsAnimating(true);
         if (event.url === '/') {
           this.moveToHome(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
         } else if (event.url === "/projects") {
@@ -165,6 +168,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.camera.position.z != 60 ||
           Math.abs(this.camera.rotation.z - -.15) > .0001) {
         window.requestAnimationFrame(animateCamera);
+      } else {
+        this.globalService.setIsAnimating(false);
       }
     }
 
@@ -184,6 +189,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.camera.position.z != 20 ||
           Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
+      } else {
+        this.globalService.setIsAnimating(false);
       }
     };
 
@@ -203,6 +210,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.camera.position.z != 5 ||
           Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
+      } else {
+        this.globalService.setIsAnimating(false);
       }
     };
 
@@ -222,6 +231,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.camera.position.z != 20 ||
           Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
+      } else {
+        this.globalService.setIsAnimating(false);
       }
     };
 
@@ -241,6 +252,8 @@ export class BackgroundAnimationComponent implements OnInit {
           this.camera.position.z != 400 ||
           Math.abs(this.camera.rotation.z - 1) > .0001) {
         window.requestAnimationFrame(animateCamera);
+      } else {
+        this.globalService.setIsAnimating(false);
       }
     };
 

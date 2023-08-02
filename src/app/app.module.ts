@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ExploreComponent } from './explore/explore.component';
+import { GlobalService } from './global';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,13 @@ import { ExploreComponent } from './explore/explore.component';
     MenuComponent,
     AboutComponent,
     BlogComponent,
-    ExploreComponent
+    ExploreComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
