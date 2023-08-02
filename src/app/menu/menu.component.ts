@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnDestroy, QueryList, ViewChildren } from '@angular/core';
-import { GlobalService } from '../global';
+import { GlobalService } from '../services/global';
 import { Subscription } from 'rxjs';
 
 @Component({

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ContentService, Project } from '../services/content';
 
 @Component({
   selector: 'app-projects',
@@ -6,21 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
-  projects: any[] = [
-    {
-      title: 'Project 1',
-      description: 'This is a description of project 1',
-      image: '../assets/placeholder_image.png'
-    },
-    {
-      title: 'Project 2',
-      description: 'This is a description of project 2',
-      image: '../assets/placeholder_image.png'
-    },
-    {
-      title: 'Project 3',
-      description: 'This is a description of project 3',
-      image: '../assets/placeholder_image.png'
-    }
-  ];
+  projects!: Project[];
+
+  constructor(private contentService: ContentService) {
+    this.projects = contentService.getProjects();
+  }
 }

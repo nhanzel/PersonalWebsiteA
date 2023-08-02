@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectItemComponent {
   @Input() title!: string;
-  @Input() description!: string;
+  @Input() blurb!: string;
   @Input() image!: string;
 }

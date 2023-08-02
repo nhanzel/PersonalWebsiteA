@@ -3,7 +3,9 @@
     <table>
         <tr *ngFor="let project of projects">
             <td>
-                <app-project-item class="project-card" [title]="project.title" [description]="project.description" [image]="project.image"></app-project-item>
+                <a [routerLink]="[project.id, 'details']">
+                    <app-project-item class="project-card" [title]="project.title" [blurb]="project.blurb" [image]="project.image"></app-project-item>
+                </a>
             </td>
         </tr>
     </table>

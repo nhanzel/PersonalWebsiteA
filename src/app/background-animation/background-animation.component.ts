@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
-import { GlobalService } from '../global';
+import { GlobalService } from '../services/global';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -18,7 +18,6 @@ export class BackgroundAnimationComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         //? I don't know if this will retrigger the animation for one frame if they click on a page they are already on
-        this.globalService.setIsAnimating(true);
         if (event.url === '/') {
           this.moveToHome(this.camera.position.x, this.camera.position.y, this.camera.position.z, this.camera.rotation.z);
         } else if (event.url === "/projects") {
@@ -172,7 +171,7 @@ export class BackgroundAnimationComponent implements OnInit {
         this.globalService.setIsAnimating(false);
       }
     }
-
+    this.globalService.setIsAnimating(true);
     animateCamera();
   }
 
@@ -193,7 +192,7 @@ export class BackgroundAnimationComponent implements OnInit {
         this.globalService.setIsAnimating(false);
       }
     };
-
+    this.globalService.setIsAnimating(true);
     animateCamera();
   }
 
@@ -214,7 +213,7 @@ export class BackgroundAnimationComponent implements OnInit {
         this.globalService.setIsAnimating(false);
       }
     };
-
+    this.globalService.setIsAnimating(true);
     animateCamera();
   }
 
@@ -235,7 +234,7 @@ export class BackgroundAnimationComponent implements OnInit {
         this.globalService.setIsAnimating(false);
       }
     };
-
+    this.globalService.setIsAnimating(true);
     animateCamera();
   }
 
@@ -256,7 +255,7 @@ export class BackgroundAnimationComponent implements OnInit {
         this.globalService.setIsAnimating(false);
       }
     };
-
+    this.globalService.setIsAnimating(true);
     animateCamera();
   }
 

@@ -1,0 +1,31 @@
+h2 {
+    font-size: 80px;
+    margin-top: 0px;
+}
+
+img {
+    position: absolute;
+    display: flex;
+    float: left;
+    top: 10%;
+    left: 5%;
+    width: 30%;
+}
+
+a {
+    color: white;
+    text-decoration: dotted;
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif;
+}
+
+table {
+    border-spacing: 0 15px;
+}
+
+.grid {
+    right: 5%;
+    top: 5%;
+    width: 50%;
+    flex-direction: column;
+}

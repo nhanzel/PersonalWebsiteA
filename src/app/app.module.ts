@@ -10,9 +10,10 @@ import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ExploreComponent } from './explore/explore.component';
-import { GlobalService } from './global';
+import { GlobalService } from './services/global';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectItemComponent } from './project-item/project-item.component';
+import { ContentService } from './services/content';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ProjectItemComponent } from './project-item/project-item.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [GlobalService],
+  providers: [GlobalService, ContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
