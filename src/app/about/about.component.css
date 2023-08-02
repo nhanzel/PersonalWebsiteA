@@ -1,8 +1,63 @@
+h2 {
+    color: white;
+    font-size: 80px;
+    text-align: left;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    margin-left: 4%;
+}
+
 p {
     color: white;
+    font-size: 20px;
+    line-height: 1.5em;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    padding-right: 4%; 
 }
 
 .grid {
+    top: 5%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.column {
+    flex-direction: column;
+    width: 50%;
+}
+
+#bottom {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 10%;
+    left: 2%;
+    width: 100%;
+}
+
+#careerBlurb {
+    left: 5%;
+    float: left;
+    text-align: justify;
+}
+
+#personalBlurb {
+    float: right;
     right: 15%;
-    top: 25%;
+    text-align: justify;
+}
+
+#portrait {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 275px;
+    margin-top: 5%;
+    margin-bottom: .7%;
 }
