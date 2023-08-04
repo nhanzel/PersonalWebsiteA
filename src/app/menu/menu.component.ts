@@ -22,10 +22,8 @@ export class MenuComponent implements OnDestroy {
         });
       }
     });
-
   }
   
-  //TODO: Turn off menu buttons when in the middle of a transition
   @ViewChildren("myLinks")
   menuItems!: QueryList<ElementRef>;
 

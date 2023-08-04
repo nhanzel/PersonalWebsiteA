@@ -5,7 +5,6 @@ h1 {
     font-size: 100px;
     font-weight: 300;
     line-height: 1.2em;
-    opacity: 1;
     margin-bottom: 0;
 }
 
@@ -16,7 +15,6 @@ h2 {
     font-size: 60px;
     font-weight: 300;
     line-height: 1em;
-    opacity: 1;
 }
 
 .grid {
