@@ -1,3 +1,4 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +33,7 @@ import { ContentService } from './services/content';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ScrollingModule,
     AppRoutingModule
   ],
   providers: [GlobalService, ContentService],

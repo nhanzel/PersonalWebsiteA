@@ -1,36 +1,36 @@
 <div @inOutAnimation class="grid">
     <div class="column">
         <h2>About</h2>
-        <h3>Skills</h3>
-        <table>
-            <tr *ngFor="let skill of skills">
-                <td class="section">
-                    <a href="{{skill.link}}" target="_blank"><img src="../../{{skill.imagePath}}" class="logo"></a>
-                    <div style="flex-direction: column; float: top">
-                        <h4>{{skill.name}}</h4>
-                        <p>{{skill.description}}</p>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <h3>Experience</h3>
-        <table>
-            <tr *ngFor="let job of experience">
-                <td class="section">
-                    <div style="flex-direction: column; float: top">
-                        <h4>{{job.title}} - {{job.company}}</h4>
-                        <p class="job-date">{{job.date}}</p>
-                        <div *ngFor="let item of job.description">
-                            <p class="job-description">{{item}}</p>
+            <h3>Skills</h3>
+            <table>
+                <tr *ngFor="let skill of skills">
+                    <td class="section">
+                        <a href="{{skill.link}}" target="_blank"><img src="../../{{skill.imagePath}}" class="logo"></a>
+                        <div style="flex-direction: column; float: top">
+                            <h4>{{skill.name}}</h4>
+                            <p>{{skill.description}}</p>
                         </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <h3>Interests</h3>
-        <p id="personal-blurb">{{aboutMe}}</p>
+                    </td>
+                </tr>
+            </table>
+            <h3>Experience</h3>
+            <table>
+                <tr *ngFor="let job of experience">
+                    <td class="section">
+                        <div style="flex-direction: column; float: top">
+                            <h4>{{job.title}} - {{job.company}}</h4>
+                            <p class="job-date">{{job.date}}</p>
+                            <div *ngFor="let item of job.description">
+                                <p class="job-description">{{item}}</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <h3>Interests</h3>
+            <p id="personal-blurb">{{aboutMe}}</p>
     </div>
-    <div>
-        <img src="../../assets/about_me_portrait.jpg" id="portrait">
-    </div>
+</div>
+<div>
+    <img src="../../assets/about_me_portrait.jpg" id="portrait">
 </div>

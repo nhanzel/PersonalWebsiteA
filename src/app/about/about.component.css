@@ -1,10 +1,12 @@
 h2 {
+    position: relative;
     color: white;
     font-size: 80px;
     text-align: left;
-    margin-top: 4%;
+    margin-top: 0%;
     margin-bottom: 4%;
     margin-left: 4%;
+    top: 1%;
 }
 
 h3 {
@@ -31,6 +33,14 @@ tr {
     height: 100px;
 }
 
+.grid {
+    margin-top: 6%;
+    max-height: calc(100vh - 5%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .logo {
     width: 100px;
     height: 100px;
@@ -41,6 +51,7 @@ tr {
 .column {
     flex-direction: column;
     width: 75%;
+    background-color: rgb(0,0,0,0.5);
 }
 
 .section {
@@ -61,12 +72,14 @@ tr {
     flex-direction: row;
     padding-left: 8%;
     padding-bottom: 4%;
+    padding-right: 8%;
 }
 
 #portrait {
+    display: absolute;
     position: fixed;
     width: 400px;
     height: 550px;
-    margin-top: 5%;
-    margin-left: -5%;
+    top: 10%;
+    right: 10%;
 }
