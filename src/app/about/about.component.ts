@@ -18,11 +18,71 @@ import { Component } from '@angular/core';
   ]
 })
 export class AboutComponent {
-  aboutMyCareer: string = "My name is Nathan Hanzel, and welcome to my website. " + 
-  "I am a full-stack engineer with a passion for programming and learning.\n\n " + 
-  "I am proficient in a range of languages, including C#, Python, and JavaScript, along with most popular JavaScript frameworks (see the explore page). " + 
-  "My expertise extends to the realm of databases, and I'm well-versed in SQL, as well as database providers like mySql and MySQLServer. Additionally, I have hands-on experience with various tools and technologies like Git, Azure, PowerShell scripting, and RabbitMQ.\n\n " + 
-  "For the past three years, I have been deeply immersed in the corporate landscape as an enterprise programmer, contributing to the development of proprietary software that caters to the needs of banks and institutions across the United States. ";
+  skills: any[] = [
+    {
+      name: "C#",
+      imagePath: "assets/csharp_logo.png",
+      link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+      description: ".NET Core, .NET Framework, ASP.NET, MVC, Web API, Entity Framework, LINQ"
+    },
+    {
+      name: "Javascript",
+      imagePath: "assets/javascript_logo.png",
+      link: "https://www.javascript.com/",
+      description: "Angular, React, Vue, Node.js, Express.js, jQuery, Typescript"
+    },
+    {
+      name: "Python",
+      imagePath: "assets/python_logo.png",
+      link: "https://www.python.org/",
+      description: "Tensorflow, Flask, Numpy, Pandas, Matplotlib"
+    },
+    {
+      name: "SQL",
+      imagePath: "assets/sql_logo.png",
+      link: "https://www.microsoft.com/en-us/sql-server/sql-server-2019",
+      description: "SQLServer, MySQL, Microsoft SQL Server"
+    },
+    {
+      name: "Git/Development Tools",
+      imagePath: "assets/git_logo.png",
+      link: "https://git-scm.com/",
+      description: "Git, Azure DevOps, Powershell"
+    }
+  ];
+  experience: any[] = [
+    {
+      title: "Full-Stack Software Engineer",
+      company: "DHICorp Inc.",
+      date: "Dec 2020 - Present",
+      description: [
+        "Developing and maintaining financial software for banks and institutions across the United States",
+        "Designing and testing software built with C#, Typescript, and MVC architectures",
+        "Managing a micro-service architecture with RabbitMQ and Azure",
+        "Collaborating with financial institutions and banks on large-scale projects"
+      ]
+    },
+    {
+      title: "Machine Learning Intern",
+      company: "Utah Valley University",
+      date: "Jun 2020 - Dec 2020",
+      description: [
+        "Developed and trained various machine learning models and frameworks using Python's Tensorflow",
+        "Gathered and Preprocessed data for use in machine learning models",
+        "Researched and implemented various machine learning algorithms and techniques"
+      ]
+    },
+    {
+      title: "Onsite Implementation Specialist",
+      company: "Boostability",
+      date: "Dec 2018 - Jun 2020",
+      description: [
+        "Developed web applications for clients using HTML, CSS, and Javascript",
+        "Implemented and monitored online marketing tools for client's websites, including Google Analytics and Google Search Console",
+        "Collaborated with clients to develop and implement SEO strategies for their websites"
+      ]
+    }
+  ];
   aboutMe: string = "When I'm not coding, you can find me growing my vinyl collection, going to concerts, watching the latest A24 movie, learning a new board game, or enjoying space documentaries (if you haven't guessed, I like space). " + 
   "Please feel free to contact me with any questions or inquiries.";
 }
