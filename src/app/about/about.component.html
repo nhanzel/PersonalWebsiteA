@@ -1,18 +1,36 @@
 <div @inOutAnimation class="grid">
     <div class="column">
         <h2>About</h2>
-        <p id="careerBlurb">{{aboutMyCareer}}</p>
+        <h3>Skills</h3>
+        <table>
+            <tr *ngFor="let skill of skills">
+                <td class="section">
+                    <a href="{{skill.link}}" target="_blank"><img src="../../{{skill.imagePath}}" class="logo"></a>
+                    <div style="flex-direction: column; float: top">
+                        <h4>{{skill.name}}</h4>
+                        <p>{{skill.description}}</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h3>Experience</h3>
+        <table>
+            <tr *ngFor="let job of experience">
+                <td class="section">
+                    <div style="flex-direction: column; float: top">
+                        <h4>{{job.title}} - {{job.company}}</h4>
+                        <p class="job-date">{{job.date}}</p>
+                        <div *ngFor="let item of job.description">
+                            <p class="job-description">{{item}}</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h3>Interests</h3>
+        <p id="personal-blurb">{{aboutMe}}</p>
     </div>
-    <div class="column">
+    <div>
         <img src="../../assets/about_me_portrait.jpg" id="portrait">
-        <p id="personalBlurb">{{aboutMe}}</p>
     </div>
-</div>
-
-<div id="bottom">
-    <img class="logo" src="../../assets/csharp_logo.png" />
-    <img class="logo" src="../../assets/python_logo.png" />
-    <img class="logo" src="../../assets/javascript_logo.png" />
-    <img class="logo" src="../../assets/sql_logo.png" />
-    <img class="logo" src="../../assets/git_logo.png" />
 </div>
