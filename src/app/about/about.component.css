@@ -35,7 +35,7 @@ tr {
 
 .grid {
     margin-top: 6%;
-    max-height: calc(100vh - 5%);
+    max-height: calc(100vh - 12%);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
