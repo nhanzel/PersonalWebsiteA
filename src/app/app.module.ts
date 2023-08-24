@@ -10,7 +10,6 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
-import { BlogComponent } from './blog/blog.component';
 import { ExploreComponent } from './explore/explore.component';
 import { GlobalService } from './services/global';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
@@ -25,7 +24,6 @@ import { ContentService } from './services/content';
     ProjectsComponent,
     MenuComponent,
     AboutComponent,
-    BlogComponent,
     ExploreComponent,
     ProjectDetailsComponent,
     ProjectItemComponent,
