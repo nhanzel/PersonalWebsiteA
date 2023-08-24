@@ -7,7 +7,7 @@ img {
     position: absolute;
     display: flex;
     float: left;
-    top: 10%;
+    top: 20%;
     left: 5%;
     width: 30%;
 }
@@ -28,4 +28,13 @@ table {
     top: 5%;
     width: 50%;
     flex-direction: column;
+}
+
+#backArrow {
+    position: absolute;
+    display: flex;
+    float: left;
+    top: 9%;
+    left: 5%;
+    width: 4%;
 }
