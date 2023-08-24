@@ -1,5 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -18,6 +19,16 @@ import { Component } from '@angular/core';
   ]
 })
 export class AboutComponent {
+  pdfUrl: SafeResourceUrl;
+
+  constructor(private santizier: DomSanitizer) {
+    this.pdfUrl = this.santizier.bypassSecurityTrustResourceUrl("../assets/resume.pdf");
+  }
+
+  openPdf() {
+    window.open("../assets/resume.pdf", "_blank");
+  }
+
   skills: any[] = [
     {
       name: "C#",
