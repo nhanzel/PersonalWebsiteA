@@ -8,10 +8,10 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'projects/:id/details', component: ProjectDetailsComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'explore', component: ExploreComponent },
-  { path: 'projects/:id/details', component: ProjectDetailsComponent },
 ];
 
 @NgModule({

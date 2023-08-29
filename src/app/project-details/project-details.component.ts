@@ -10,8 +10,9 @@ import { ContentService, Project } from '../services/content';
 export class ProjectDetailsComponent {
   project!: Project;
 
-  constructor(private contentService: ContentService, private route: ActivatedRoute) {
-    this.route.params.subscribe(params => this.project = contentService.getProject(params['id']));
-    console.log(this.project.links);
+  constructor(private contentService: ContentService, private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => this.project = this.contentService.getProject(params['id']));
   }
 }
