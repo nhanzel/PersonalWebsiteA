@@ -58,7 +58,7 @@ export class AboutComponent {
       name: "Git/Development Tools",
       imagePath: "assets/git_logo.png",
       link: "https://git-scm.com/",
-      description: "Git, Azure DevOps, Powershell"
+      description: "Git, AWS, Azure DevOps, Powershell"
     }
   ];
   experience: any[] = [
