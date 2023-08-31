@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from '../services/email';
+import { NotificationService } from '../services/notification';
 
 @Component({
   selector: 'app-contact-me',
@@ -16,24 +17,24 @@ export class ContactMeComponent {
 
     visible = false;
 
-    constructor(private emailService: EmailService) { }
+    constructor(private emailService: EmailService, private notifyService: NotificationService) { }
   
     send() {
         if (this.emailForm.get("name")?.valid && this.emailForm.get("contactInfo")?.valid && this.emailForm.get("message")?.valid) {
             let emailData = this.emailForm.value;
             this.emailService.sendEmail(emailData.name!, emailData.contactInfo!, emailData.message!).subscribe((response: any) => {
                 if (response.messageId != "") {
-                  //TODO: Show success toaster
+                  this.notifyService.showSuccess("I'll be in contact soon, thanks!", "Success");
                   console.log("Email sent successfully");
                   this.closePopup();
                 } else {
-                  //TODO: Show error toaster
+                  this.notifyService.showError("Message failed to send, try again later", "Error");
                   console.log("Email failed to send");
                 }
             });
         }
         else {
-          //TODO: Show error toaster
+            this.notifyService.showError("Double check all the fields and ensure they are filled in", "Invalid Form");
           console.log("Email data is bad");
         }
     }
