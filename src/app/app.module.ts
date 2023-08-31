@@ -1,5 +1,6 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -15,6 +16,9 @@ import { GlobalService } from './services/global';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectItemComponent } from './project-item/project-item.component';
 import { ContentService } from './services/content';
+import { ContactMeComponent } from './contact-me/contact-me.component';
+import { EmailService } from './services/email';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,14 +31,18 @@ import { ContentService } from './services/content';
     ExploreComponent,
     ProjectDetailsComponent,
     ProjectItemComponent,
+    ContactMeComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     ScrollingModule,
     AppRoutingModule
   ],
-  providers: [GlobalService, ContentService],
+  providers: [GlobalService, ContentService, EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

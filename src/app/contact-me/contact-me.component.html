@@ -1,0 +1,20 @@
+<button (click)="openPopup()" id="open-popup">Contact</button>
+<div *ngIf="visible">
+    <form [formGroup]="emailForm" id="contact-container" (ngSubmit)="send()">
+        <h2>Contact Me</h2>
+  
+        <label>Name: </label>
+        <input type="text" formControlName="name">
+  
+        <label>Contact Info: </label>
+        <input type="text" formControlName="contactInfo">
+
+        <label>Message: </label>
+        <textarea id="message" formControlName="message"></textarea>
+  
+        <div id="button-wrapper">
+            <button type="submit" class="btn">Send</button>
+            <button class="btn" (click)="closePopup()">Close</button>
+        </div>
+    </form>
+</div>
