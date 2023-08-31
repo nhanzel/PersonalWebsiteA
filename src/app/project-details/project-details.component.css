@@ -23,11 +23,16 @@ table {
     border-spacing: 0 15px;
 }
 
-.grid {
+.project-details-grid {
     right: 5%;
     top: 5%;
     width: 50%;
     flex-direction: column;
+    position: absolute;
+    display: flex;
+    padding: 10%, 2%, 10%, 2%;
+    margin: 1%;
+    border-radius: 5px;
 }
 
 #backArrow {

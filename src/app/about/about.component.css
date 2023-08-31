@@ -48,7 +48,7 @@ tr {
     float: left;
 }
 
-.column {
+#column {
     flex-direction: column;
     width: 75%;
     background-color: rgb(0,0,0,0.5);

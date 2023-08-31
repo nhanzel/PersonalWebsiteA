@@ -1,8 +1,8 @@
-<div @inOutAnimation class="grid">
+<div @inOutAnimation class="grid" id="project-grid">
     <h2>Portfolio</h2>
     <table>
         <tr *ngFor="let project of projects">
-            <td>
+            <td class="table-project-row">
                 <a [routerLink]="[project.id, 'details']">
                     <app-project-item class="project-card" [title]="project.title" [blurb]="project.blurb" [image]="project.image"></app-project-item>
                 </a>

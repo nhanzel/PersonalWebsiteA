@@ -10,7 +10,7 @@ h2 {
     flex-direction: column;
 }
 
-td {
+.table-project-row {
     border: 1px solid gray;
     border-radius: 5px;
 }
