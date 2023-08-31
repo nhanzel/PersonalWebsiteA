@@ -7,33 +7,33 @@ export class ContentService {
   
   private projects$: Project[] = [
     new Project(1, 
-        'Project 1', 
-        'This is a description of project 1', 
-        'placeholder_image.png',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sagittis nisl, quis commodo risus posuere a. Vivamus dapibus elementum urna in rhoncus. Nulla pretium feugiat lacus, in euismod nisi faucibus malesuada. Fusce pellentesque turpis ac odio varius, quis varius metus efficitur. Vestibulum dignissim ipsum nisi, eget fringilla est venenatis at. Pellentesque id risus erat. Nunc mattis rhoncus erat in vestibulum. In venenatis lacinia accumsan. Sed eu felis ut metus vestibulum finibus eget ultricies nulla. Donec varius tortor sagittis, volutpat elit sed, pretium tortor. Sed ut porttitor elit, ac fringilla nisi. Maecenas lobortis risus id neque iaculis, suscipit tempus dolor tincidunt. Aliquam eget tortor ac massa tempor scelerisque. Donec ante neque, consequat ac commodo interdum, accumsan eu ante. Sed tristique est nec tincidunt commodo. Sed dignissim turpis nisi, a convallis augue elementum sed. Morbi quis sem sit amet lacus efficitur ultricies at nec nisl. Cras et egestas enim. Quisque volutpat sapien non gravida hendrerit. Sed elementum dictum mauris, ac mollis orci pulvinar eu. Fusce in eros eu massa iaculis dignissim. Quisque aliquet tellus vel malesuada ultrices. Cras sollicitudin ex in facilisis euismod. ',
+        'Alphabetized', 
+        'A VS Code extension that alphabetizes lines of text', 
+        'alphabetize.png',
+        'Alphabetize is a vscode extension built using typescript and vscode\'s extension api. It allows users to alphabetize lines of text, as well as css selectors and properties. It is available on the vscode marketplace. This was a great learning experience and enabled me to learn more about the best IDE out there (sorry jetbrains fans).',
         [
-            ['Google', 'https://www.google.com'],
-            ['Bing', 'https://www.bing.com'],
+            ['Extension', 'https://marketplace.visualstudio.com/items?itemName=nathan-hanzel.alphabetized'],
+            ['Source', 'https://github.com/nhanzel/Alphabetize'],
         ]
     ),
     new Project(2, 
-        'Project 2', 
-        'This is a description of project 2', 
-        'placeholder_image.png',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sagittis nisl, quis commodo risus posuere a. Vivamus dapibus elementum urna in rhoncus. Nulla pretium feugiat lacus, in euismod nisi faucibus malesuada. Fusce pellentesque turpis ac odio varius, quis varius metus efficitur. Vestibulum dignissim ipsum nisi, eget fringilla est venenatis at. Pellentesque id risus erat. Nunc mattis rhoncus erat in vestibulum. In venenatis lacinia accumsan. Sed eu felis ut metus vestibulum finibus eget ultricies nulla. Donec varius tortor sagittis, volutpat elit sed, pretium tortor. Sed ut porttitor elit, ac fringilla nisi. Maecenas lobortis risus id neque iaculis, suscipit tempus dolor tincidunt. Aliquam eget tortor ac massa tempor scelerisque. Donec ante neque, consequat ac commodo interdum, accumsan eu ante. Sed tristique est nec tincidunt commodo. Sed dignissim turpis nisi, a convallis augue elementum sed. Morbi quis sem sit amet lacus efficitur ultricies at nec nisl. Cras et egestas enim. Quisque volutpat sapien non gravida hendrerit. Sed elementum dictum mauris, ac mollis orci pulvinar eu. Fusce in eros eu massa iaculis dignissim. Quisque aliquet tellus vel malesuada ultrices. Cras sollicitudin ex in facilisis euismod. ',
+        'Discogs CLI Tool', 
+        'A CLI tool for sellers looking to quickly price their inventory', 
+        'vinyl.png',
+        'Discogs is an online vinyl marketplace as well as forum for music fans. As an avid vinyl fan myself, I made this CLI tool that integrates with your discogs account to quickly price your inventory. It is built using python. You can either manually add your vinyl_ids, or make a folder of all your vinyl in discogs. It then runs a batch process for all the vinyl and displays the relevant financial and market information to the console.',
         [
-          ['Google', 'https://www.google.com'],
-          ['Bing', 'https://www.bing.com'],
+          ['Discogs', 'https://www.discogs.com/'],
+          ['Source', 'https://github.com/nhanzel/discogs_vinyl_sellers_tool'],
         ]
     ),
     new Project(3, 
-        'Project 3', 
-        'This is a description of project 3', 
-        'placeholder_image.png',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sagittis nisl, quis commodo risus posuere a. Vivamus dapibus elementum urna in rhoncus. Nulla pretium feugiat lacus, in euismod nisi faucibus malesuada. Fusce pellentesque turpis ac odio varius, quis varius metus efficitur. Vestibulum dignissim ipsum nisi, eget fringilla est venenatis at. Pellentesque id risus erat. Nunc mattis rhoncus erat in vestibulum. In venenatis lacinia accumsan. Sed eu felis ut metus vestibulum finibus eget ultricies nulla. Donec varius tortor sagittis, volutpat elit sed, pretium tortor. Sed ut porttitor elit, ac fringilla nisi. Maecenas lobortis risus id neque iaculis, suscipit tempus dolor tincidunt. Aliquam eget tortor ac massa tempor scelerisque. Donec ante neque, consequat ac commodo interdum, accumsan eu ante. Sed tristique est nec tincidunt commodo. Sed dignissim turpis nisi, a convallis augue elementum sed. Morbi quis sem sit amet lacus efficitur ultricies at nec nisl. Cras et egestas enim. Quisque volutpat sapien non gravida hendrerit. Sed elementum dictum mauris, ac mollis orci pulvinar eu. Fusce in eros eu massa iaculis dignissim. Quisque aliquet tellus vel malesuada ultrices. Cras sollicitudin ex in facilisis euismod. ',
+        'Unity Maze Generator', 
+        'A Unity asset that procedurally generates a maze', 
+        'maze.png',
+        'This is a Unity asset that procedurally generates a maze. It is built using C# and Unity. It is available on the Unity Asset Store. I have been a fan of game development for a long time, it is what got me into programming. I figured I would publish this small passion project so other developers could make something greater with it.',
         [
-          ['Google', 'https://www.google.com'],
-          ['Bing', 'https://www.bing.com'],
+          ['Asset Store', 'https://assetstore.unity.com/packages/slug/264693'],
+          ['Source', 'https://github.com/nhanzel/Maze-Generator-Unity'],
         ]
     ),
   ];

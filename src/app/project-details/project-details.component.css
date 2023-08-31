@@ -15,7 +15,7 @@ img {
 a {
     color: white;
     text-decoration: dotted;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -37,4 +37,8 @@ table {
     top: 9%;
     left: 5%;
     width: 4%;
+}
+
+p {
+    font-size: 20px;
 }
