@@ -201,12 +201,12 @@ export class BackgroundAnimationComponent implements OnInit {
     const animateCamera = () => {
       this.camera.position.x = this.shift(x, this.camera.position.x, 0, Math.abs(x) / this.incrementSteps);
       this.camera.position.y = this.shift(y, this.camera.position.y, 19, Math.abs(y - 19) / this.incrementSteps);
-      this.camera.position.z = this.shift(z, this.camera.position.z, 5, Math.abs(z - 5) / this.incrementSteps);
+      this.camera.position.z = this.shift(z, this.camera.position.z, 10, Math.abs(z - 10) / this.incrementSteps);
       this.camera.rotation.z = this.shift(zR, this.camera.rotation.z, 0, Math.abs(zR) / this.incrementSteps);
       this.renderer.render(this.scene, this.camera);
       if (this.camera.position.x != 0 ||
           this.camera.position.y != 19 ||
-          this.camera.position.z != 5 ||
+          this.camera.position.z != 10 ||
           Math.abs(this.camera.rotation.z) > .0001) {
         window.requestAnimationFrame(animateCamera);
       } else {
