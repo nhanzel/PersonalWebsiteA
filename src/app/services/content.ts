@@ -32,7 +32,6 @@ export class ContentService {
         'maze.png',
         'This is a Unity asset that procedurally generates a maze. It is built using C# and Unity. It is available on the Unity Asset Store. I have been a fan of game development for a long time, it is what got me into programming. I figured I would publish this small passion project so other developers could make something greater with it.',
         [
-          ['Asset Store', 'https://assetstore.unity.com/packages/slug/264693'],
           ['Source', 'https://github.com/nhanzel/Maze-Generator-Unity'],
         ]
     ),
