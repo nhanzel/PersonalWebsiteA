@@ -63,14 +63,24 @@ export class AboutComponent {
   ];
   experience: any[] = [
     {
+      title: "Instructional Assistant",
+      company: "Utah Valley University",
+      date: "Aug 2024 - Present",
+      description: [
+        "Assist professors and Utah Valley University with grading and curriculum development",
+        "Work with students in private tutoring sessions",
+        "Aid in developing new assignments for Utah Valley University students in Python and C++"
+      ]
+    },
+    {
       title: "Full-Stack Software Engineer",
       company: "DHICorp Inc.",
-      date: "Dec 2020 - Present",
+      date: "Dec 2020 - Jun 2024",
       description: [
-        "Developing and maintaining financial software for banks and institutions across the United States",
-        "Designing and testing software built with C#, Typescript, and MVC architectures",
-        "Managing a micro-service architecture with RabbitMQ and Azure",
-        "Collaborating with financial institutions and banks on large-scale projects"
+        "Developed and maintained financial software for banks and institutions across the United States",
+        "Designed and tested software built with C#, Typescript, and MVC architectures",
+        "Managed a micro-service architecture with RabbitMQ and Azure",
+        "Collaborated with financial institutions and banks on large-scale projects"
       ]
     },
     {
@@ -94,6 +104,6 @@ export class AboutComponent {
       ]
     }
   ];
-  aboutMe: string = "When I'm not coding, you can find me growing my vinyl collection, going to concerts, watching the latest A24 movie, learning a new board game, or enjoying space documentaries (if you haven't guessed, I like space). " + 
+  aboutMe: string = "When I'm not coding, you can find me growing my vinyl collection, going to concerts, watching the latest A24 movie, reading, or enjoying space documentaries (if you haven't guessed, I like space). " + 
   "Please feel free to contact me with any questions or inquiries.";
 }

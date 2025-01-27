@@ -87,3 +87,25 @@ tr {
 #resume {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    h3 {
+        font-size: 40px;
+    }
+    
+    h4 {
+        font-size: 25px; /* Adjusted font size for small screens */
+    }
+
+    p {
+        font-size: 15px; /* Adjusted font size for small screens */
+    }
+
+    .job-description {
+        font-size: 15px;
+    }
+
+    .job-date {
+        font-size: 20px;
+    }
+}
